@@ -162,5 +162,5 @@ async def gen_report(request:Request, report:str):
         
 if __name__ == "__main__":
     uvicorn.run("index:app", host="127.0.0.1", port=80)
-    #available from         http://127.0.0.1:8923/
+    #available from         http://127.0.0.1:80/
     
