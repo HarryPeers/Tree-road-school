@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Gilroy';
+    font-style: light;
+    font-weight: normal;
+    src: url("./light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'GilroyBold';
+    font-style: bold;
+    font-weight: normal;
+    src: url("./bold.otf") format("opentype");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+body {
+    background-color: #181731;
+    margin: auto;
+    color: white;
+    font-size: 32px;
+    font-family: 'Gilroy';
+    padding: 5%;
+}
+
+.container {
+    background-color: #1f1e3e;
+    margin: 0 auto 0 auto;
+    display: bock;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 30px;
+    padding: 90px;
+    border: 1px solid #3BA55C;
+    font-size: 24px;
+}
+a:hover, button:hover {
+cursor: pointer;
+}
+.part {
+    display: block;
+    text-align: center;
+}
+
+.part input {
+    margin-top: 10px;
+}
+
+.error {
+    display: none;
+    margin: 10px;
+    color: red;
+    font-size: 16px;
+    font-family: 'Gilroy';
+}
+
+h {
+    font-size: 84px;
+    font-size: 7vw;
+    font-family: 'GilroyBold';
+}
+
+.list {
+    display: inline-block;
+    margin: auto;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.list div {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.list-right {
+    float:right;
+    display: block;
+    margin-left: 30px;
+}
+
+.center {
+    display: block;
+    margin: 30px auto 0 auto !important;
+}
+
+.center button {
+    margin: auto;
+}
+
+.list-left {
+    line-height: 31px;
+}
+
+.studentId {
+    width: 100%;
+    padding: 0px;
+    border-bottom: #3BA55C 1px solid;
+    border-collapse: collapse;
+}
+
+.studentId .first, .studentId .first th {
+    border: #3BA55C 1px solid;
+    margin: 0px;
+}
+
+th {
+    border-style: solid;
+    border-color: #3BA55C;
+    border-width: 0px 1px 0px 1px;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(59,165,92,0.5)
+}
+
+input { 
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+    height: 20px;
+    background-color: #181731;
+    color: white;
+    border: 1px solid #3BA55C !important;
+    text-align: center;
+}
+
+button {
+    background-color: #181731;
+    color: #3BA55C;
+    border-radius: 8px;
+    border: none;
+    padding: 5px 10px 5px 10px;
+}
+
+.home {
+    margin: -65px -65px 0 0;
+    float: right;
+}
+
+.part button {
+    margin-top: 10px;
+}

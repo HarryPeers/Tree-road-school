@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./resource/style.css">
+        <script src="https://kit.fontawesome.com/46b9b75cfa.js" crossorigin="anonymous"></script>
+        <title>View records</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="home" id="home-button" onclick="open_page('home')" style='display: none;'>
+                <i class="fa-sharp fa-solid fa-house"></i>
+            </div>
+            <div class="part" id="login-page">
+                <h>Login</h>
+                <br>
+                <input type="password" id="password">
+                <br>
+                <button onclick="login('password')">Submit</button>
+                <br>
+                <span class="error" id="login-error">Invalid password!</span>
+            </div>
+            <div class="part" id="home-page" style="display:none;">
+                <h>Welcome!</h>
+                <br>
+                What would you like to do?
+                <br>
+                <div class="list" style="text-align:center;">
+                    <a onclick="open_page('create')">Enter a student into the database.</a><br>
+                    <a onclick="open_page('display')">Display all students.</a><br>
+                    <a onclick="open_page('report')">Generate a report.</a><br>
+                    <a onclick="logout()">Logout.</a><br>
+                </div>
+            </div>
+            <div class="part" id="create-page" style="display:none;">
+                <h>Create a student,</h><br>
+                Enter the details below to create a student, if the entered form group<br>does not exist it will create one.<br>
+                <div class="list">
+                    <div class="list-left">
+                        Student forename:<br>
+                        Student surname:<br>
+                        Student gender:<br>
+                        Student birth date:<br>
+                        Home address:<br>
+                        Home phone number:<br>
+                        Tutor group:<br>
+                    </div>
+                    <div class="list-right">
+                        <input style="width:150px;" id="createStudentForename"/><br>
+                        <input style="width:150px;" id="createStudentSurname"/><br>
+                        <input style="width:150px;" id="createStudentGender"/><br>
+                        <input style="width:150px;" type="date" id="createStudentDOB"><br>
+                        <input style="width:150px;" id="createHomeAddress"/><br>
+                        <input style="width:150px;" id="createHomeNumber"/><br>
+                        <input style="width:150px;" id="createStudentGroup"/><br>
+                    </div><br>
+                </div>
+                <div class="center">
+                    <button onclick='create_student()'>Create student</button>
+                </div>
+            </div>
+            <div class="part" id="view-page" style="display:none;">
+                <h>View a student,</h><br>
+                <div class="list">
+                    <div class="list-left" style="line-height: 31px;">
+                        Student forename:<br>
+                        Student surname:<br>
+                        Student gender:<br>
+                        Student birth date:<br>
+                        Student email:<br>
+                        Student Id:<br>
+                        Home address:<br>
+                        Home phone number:<br>
+                        Tutor group:<br>
+                    </div>
+                    <div class="list-right" style='color: 3BA55C;line-height: 31px;'>
+                        <span id="viewStudentForename"></span><br>
+                        <span id="viewStudentSurname"></span><br>
+                        <span id="viewStudentGender"></span><br>
+                        <span id="viewStudentDOB"></span><br>
+                        <span id="viewStudentEmail"></span><br>
+                        <span id="viewStudentId"></span><br>
+                        <span id="viewHomeAddress"></span><br>
+                        <span id="viewHomeNumber"></span><br>
+                        <span id="viewStudentGroup"></span><br>
+                    </div>
+                </div>
+                <div class="center">
+                    <button onclick='delete_student()' id="deleteStudent">Delete student</button>
+                </div>
+            </div>
+            <div class="part" id="display-page" style="display:none;">
+                <h>Display all students,</h><br><br>
+<!--                Search by field:<br><input placeholder="name/id" id="searchStudents"/><br><br>-->
+                <table class="studentId" id="studentTables"></table>
+            </div>
+            <div class="part" id="report-page" style="display:none;">
+                <h>Generate a report,</h><br>
+                <div class="list">
+                    <a onclick="open_report('Age')">Age distribution.</a><br>
+                    <a onclick="open_report('Gender')">Gender distribution.</a><br>
+                    <a onclick="open_report('Tutor')">Tutor group distribution.</a><br>
+                </div>
+            </div>
+            <div class="part" id="reportView-page" style="display:none;">
+                <h id="reportHeader"></h><br>
+                <div class="list">
+                    <div class="list-left" style="line-height: 31px;" id="report-text">
+                            
+                    </div>
+                    <div class="list-right" style='color: 3BA55C;line-height: 31px;' id="report-stats">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./resource/script.js"></script>
+</html>
